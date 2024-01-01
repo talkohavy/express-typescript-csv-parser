@@ -5,3 +5,4 @@
 **/_ignore_
 **/dist
 .turbo
+tsconfig.tsbuildinfo
