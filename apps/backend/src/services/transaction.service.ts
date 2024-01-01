@@ -52,7 +52,7 @@ class TransactionService implements ITransactionService {
         const failedTransactions = [];
         let totalCount = 0;
 
-        const csvFileParser = parseCsvFile({ from: 2 }); // <--- {from: 2} means to skip first line of Table Headers
+        const csvFileParser = parseCsvFile({ from: 2, cast: true }); // <--- {from: 2} means to skip first line of Table Headers
         const csvRecordUploader = new MyStream({
           onData: async (chunk) => {
             try {
