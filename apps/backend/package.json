@@ -1,0 +1,28 @@
+{
+  "name": "@root-app/backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "start": "node dist/src/index.js",
+    "dev": "nodemon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@root-client/postgres": "workspace:^",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "csv-parse": "^5.5.3",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "formidable": "^3.5.1",
+    "helmet": "^7.1.0",
+    "joi": "^17.11.0",
+    "pg": "^8.11.3"
+  }
+}

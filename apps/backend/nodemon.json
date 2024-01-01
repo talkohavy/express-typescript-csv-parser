@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/nodemon.json",
+  "verbose": true,
+  "ignoreRoot": [],
+  "ignore": [".git", "node_modules", "**/node_modules"],
+  "delay": 30,
+  "watch": ["./src/**", "../../clients/**/src/*", "../../packages/**/src/*", "../../.env"],
+  "ext": "ts,js",
+  "exec": "pnpm build && pnpm run start"
+}
