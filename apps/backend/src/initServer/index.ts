@@ -1,4 +1,5 @@
 import express, { Express } from 'express';
+import './loadEnvVariables.js';
 
 const PORT = 8000;
 
