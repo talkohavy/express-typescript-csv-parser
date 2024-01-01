@@ -56,7 +56,6 @@ class TransactionService implements ITransactionService {
         const csvRecordUploader = new MyStream({
           onData: async (chunk) => {
             try {
-              await new Promise((res) => setTimeout(res, 200));
               const chunkAsObject = transformTransaction(chunk);
 
               const body = validateSchema({ schema: transactionSchema, payload: chunkAsObject });
@@ -88,7 +87,6 @@ class TransactionService implements ITransactionService {
           maxFileSize: 8388608, // file size limit of 8MB. The result of: 8 * 1024 * 1024.
           keepExtensions: true,
           fileWriteStreamHandler: (file) => {
-            // @ts-ignore
             const fileType = file.mimetype.split('/').pop();
             validateFileType({ fileType, validFileTypes: ['csv'] });
 
