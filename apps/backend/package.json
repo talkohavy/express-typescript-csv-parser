@@ -2,12 +2,12 @@
   "name": "@root-app/backend",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/src/index.js",
-  "types": "dist/src/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
     "build": "tsc --project tsconfig.build.json",
-    "start": "node dist/src/index.js",
+    "start": "node dist/index.js",
     "dev": "nodemon"
   },
   "keywords": [],
